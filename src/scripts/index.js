@@ -2,7 +2,11 @@
 /* global shoppingList, cuid */
 
 // eslint-disable-next-line no-unused-vars
-const store = {
+import * as shoppingList from './shopping-list';
+import $ from 'jquery';
+import cuid from 'cuid';
+import '../styles/index.css';
+ const store = {
   items: [
     { id: cuid(), name: 'apples', checked: false },
     { id: cuid(), name: 'oranges', checked: false },
@@ -12,7 +16,7 @@ const store = {
   hideCheckedItems: false,
   searchTerm: ''
 };
-
+export default store;
 function main() {
   shoppingList.bindEventListeners();
   shoppingList.render();
